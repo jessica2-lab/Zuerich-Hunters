@@ -619,4 +619,28 @@ section p {
     .header-button {
         display: none;
     }
+    @media (max-width: 768px) 
+
+    .logo-section {
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px 20px 0 20px;
+        gap: 16px;
+        text-align: center;
+    }
+
+    .large-logo {
+        width: 160px;
+        max-width: 80%;
+    }
+
+    .lion-svg {
+        width: 240px;
+        max-width: 90%;
+        margin-top: -10px;
+    }
+
+}
+
+
 }
