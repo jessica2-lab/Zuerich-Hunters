@@ -663,7 +663,7 @@ section p {
     }
 
     .large-logo {
-        display: none
+        display: none ;
         width: 160px;
         max-width: 80%;
         height: auto;
