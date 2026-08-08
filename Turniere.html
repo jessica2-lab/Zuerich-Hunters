@@ -55,6 +55,132 @@
             document.addEventListener("DOMContentLoaded", () => {
                 // Any page specific logic here
             });
+            <body>
+    <!-- Header -->
+    <app-header></app-header>
+
+    <!-- Sidebar Overlay -->
+    <app-sidebars></app-sidebars>
+
+    <!-- Main Content -->
+    <main class="news-container">
+
+        <!-- Schweizermeisterschaft -->
+        <article class="news-card">
+            <div class="news-card-content">
+                <p class="news-date">Saison 2025 / 2026</p>
+                <h2>Schweizermeisterschaft</h2>
+                <p>
+                    Hier findest du alle Informationen und Ergebnisse
+                    zur Schweizermeisterschaft der Saison 2025 / 2026.
+                </p>
+
+                <button class="weiterlesen" onclick="toggleBeitrag(this)">
+                    Weiterlesen →
+                </button>
+
+                <div class="beitrag-details">
+                    <iframe
+                        src="https://tournifyapp.com/live/swisschampionship25-26/team"
+                        width="100%"
+                        height="900"
+                        style="border: none">
+                    </iframe>
+                </div>
+            </div>
+        </article>
+
+
+        <!-- Sharks Open -->
+        <article class="news-card">
+            <div class="news-card-content">
+                <p class="news-date">April 2026</p>
+                <h2>Sharks Open</h2>
+                <p>
+                    Im April 2026 fand das Sharks Open statt.
+                    Hier geht es zu den Ergebnissen des Turniers.
+                </p>
+
+                <button class="weiterlesen" onclick="toggleBeitrag(this)">
+                    Weiterlesen →
+                </button>
+
+                <div class="beitrag-details">
+                    <iframe
+                        src="https://tournifyapp.com/live/isdo2"
+                        width="100%"
+                        height="900"
+                        style="border: none">
+                    </iframe>
+                </div>
+            </div>
+        </article>
+
+
+        <!-- CEC -->
+        <article class="news-card">
+            <div class="news-card-content">
+                <p class="news-date">Juni 2026</p>
+                <h2>Central European Championship</h2>
+                <p>
+                    Die CEC findet im Juni 2026 in Wien statt.
+                </p>
+
+                <button class="weiterlesen" onclick="toggleBeitrag(this)">
+                    Weiterlesen →
+                </button>
+
+                <div class="beitrag-details">
+                    <p>
+                        Central European Championship in Wien (CEC)
+                    </p>
+                </div>
+            </div>
+        </article>
+
+
+        <!-- World Championship -->
+        <article class="news-card">
+            <div class="news-card-content">
+                <p class="news-date">Dezember 2026</p>
+                <h2>World Championship</h2>
+                <p>
+                    Im Dezember 2026 geht es zur Weltmeisterschaft
+                    nach Bangkok.
+                </p>
+
+                <button class="weiterlesen" onclick="toggleBeitrag(this)">
+                    Weiterlesen →
+                </button>
+
+                <div class="beitrag-details">
+                    <p>
+                        World Championship in Bangkok
+                    </p>
+                </div>
+            </div>
+        </article>
+
+    </main>
+
+
+    <script src="js/components.js"></script>
+
+    <script>
+        function toggleBeitrag(button) {
+            const details = button.nextElementSibling;
+
+            details.classList.toggle("open");
+
+            if (details.classList.contains("open")) {
+                button.textContent = "Weniger anzeigen ↑";
+            } else {
+                button.textContent = "Weiterlesen →";
+            }
+        }
+    </script>
+
+</body>
         </script>
     </body>
 </html>
