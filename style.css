@@ -796,3 +796,102 @@ h1, h2, h3 {
     overflow-wrap: break-word;
     word-break: break-word;
 }
+/* =========================
+   TURNIER-BEITRÄGE
+   ========================= */
+
+.news-container {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.news-card {
+    background: rgba(0, 0, 0, 0.75);
+    border-left: 4px solid rgb(255, 184, 82);
+    border-radius: 8px;
+    margin-bottom: 25px;
+    padding: 25px 30px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7);
+}
+
+.news-date {
+    color: rgb(255, 184, 82);
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.news-card h2 {
+    color: white;
+    font-size: 28px;
+    margin: 0 0 10px 0;
+}
+
+.news-card p {
+    color: #E7E4D9;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* Weiterlesen Button */
+
+.weiterlesen {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 18px;
+
+    background-color: transparent;
+    color: rgb(255, 184, 82);
+
+    border: 1px solid rgb(255, 184, 82);
+    border-radius: 5px;
+
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.weiterlesen:hover {
+    background-color: rgb(255, 184, 82);
+    color: rgb(96, 17, 10);
+}
+
+/* Inhalt, der erst nach "Weiterlesen" erscheint */
+
+.beitrag-details {
+    display: none;
+    margin-top: 25px;
+    padding-top: 25px;
+    border-top: 1px solid rgba(255, 184, 82, 0.4);
+}
+
+.beitrag-details.open {
+    display: block;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .news-container {
+        padding: 0 15px;
+        margin: 40px auto;
+    }
+
+    .news-card {
+        padding: 20px;
+    }
+
+    .news-card h2 {
+        font-size: 24px;
+    }
+}
