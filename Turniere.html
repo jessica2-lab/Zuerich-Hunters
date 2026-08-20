@@ -18,25 +18,50 @@
     <main class="news-container">
 
                 <!-- Sektion: Schweizermeisterschaft -->
-        <article class="news-card">
-            <div class="news-card-content">
-                <p class="news-date">Saison 2025 / 2026</p>
-                <h2>Schweizermeisterschaft</h2>
-                <p>Die allererste Saison für unser junges Hunters-Rudel ist offiziell zu Ende! Was für eine Reise – wir haben wertvolle Erfahrungen gesammelt und blicken voller Stolz auf ein intensives Premierenjahr zurück.</p>
+<article class="news-card">
+    <div class="news-card-content">
+        <p class="news-date">Saison 2025 / 2026</p>
+        <h2>Schweizermeisterschaft</h2>
+        <p>Die allererste Saison für unser junges Hunters-Rudel ist offiziell zu Ende! Was für eine Reise – wir haben wertvolle Erfahrungen gesammelt und blicken voller Stolz auf ein intensives Premierenjahr zurück.</p>
 
-                <button class="weiterlesen" onclick="toggleBeitrag(this)">Weiterlesen →</button>
+        <button class="weiterlesen" onclick="toggleBeitrag(this)">Weiterlesen →</button>
 
-                <div class="beitrag-details">
+        <!-- Aufgeklappter Bereich im neuen Split-Layout -->
+        <div class="beitrag-details">
+            <div class="turnier-split-layout">
+                
+                <!-- Linke Spalte: Text & Ergebnisse -->
+                <div class="turnier-text-spalte">
                     <p>Vom anfänglichen Premierchaos haben wir uns als Team von Spieltag zu Spieltag grandios nach oben gekämpft und spielerisch enorm viel dazugelernt. Die harten Trainings haben sich ausgezahlt, was sich auch in den finalen Ergebnissen widerspiegelt:</p>
-                    <ul>
-                        <li>✨ <strong style="color: white;">Mixed:</strong> Starker 5. Platz</li>
-                        <li>🔥 <strong style="color: white;">Herren:</strong> Knapp am Podest vorbei auf Platz 4</li>
-                        <li>🥉 <strong style="color: white;">Damen (in der SG Röstigraben):</strong> Sensationeller 3. Platz und damit die Bronzemedaille!</li>
+                    
+                    <ul class="ergebnis-liste">
+                        <li><span class="emoji">✨</span> <strong>Mixed:</strong> Starker 5. Platz</li>
+                        <li><span class="emoji">🔥</span> <strong>Herren:</strong> Knapp am Podest vorbei auf Platz 4</li>
+                        <li><span class="emoji">🥉</span> <strong>Damen (in der SG Röstigraben):</strong> Sensationeller 3. Platz und damit die Bronzemedaille!</li>
                     </ul>
-                    <p>Das ist ein fantastisches Fundament, auf dem wir für die Zukunft aufbauen können. Ein riesiges Dankeschön an alle Spieler, Supporter und Fans. Wir sind hungrig auf mehr und freuen uns schon jetzt riesig auf die nächste Saison!</p>
+                    
+                    <p class="turnier-fazit">Das ist ein fantastisches Fundament, auf dem wir für die Zukunft aufbauen können. Ein riesiges Dankeschön an alle Spieler, Supporter und Fans. Wir sind hungrig auf mehr und freuen uns schon jetzt riesig auf die nächste Saison!</p>
                 </div>
+
+                <!-- Rechte Spalte: Deine Fotos -->
+                <div class="turnier-foto-spalte">
+                    <!-- Erstes Foto  -->
+                    <div class="turnier-foto-box">
+                        <img src="images/ Damen 1.Turniertag " alt="Zürich Hunters Team Schweizermeisterschaft">
+                        <span class="foto-caption">Unser Rudel an der SM</span>
+                    </div>
+                    <!-- Zweites Foto -->
+                    <div class="turnier-foto-box">
+                        <img src="Images/Herren 2.Turniertag" alt="Damen Podest Röstigraben">
+                        <span class="foto-caption">!</span>
+                    </div>
+                </div>
+
             </div>
-        </article>
+        </div>
+    </div>
+</article>
+
 
         </article>
 
