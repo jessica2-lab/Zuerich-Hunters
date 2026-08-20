@@ -1,177 +1,105 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="de">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Turniere - Zürich Hunters</title>
-        <link rel="stylesheet" href="style.css" />
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turniere - Zürich Hunters</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    <body>
-        <!-- Header  -->
-        <app-header></app-header>
-
-        <!-- Sidebar Overlay -->
-        <app-sidebars></app-sidebars>
-
-        <!-- Main Content -->
-        <main>
-            <section>
-                <h2>Schweizer&shy;meisterschaft</h2>
-                <h2>Saison 2025 / 2026</h2>
-                <iframe
-                    src="https://tournifyapp.com/live/swisschampionship25-26/team"
-                    width="100%"
-                    height="900"
-                    style="border: none"
-                >
-                </iframe>
-            </section>
-
-            <section>
-                <h2>weitere Turniere</h2>
-                <p></p>
-                <h3>April 2026:</h3>
-                <p>Sharks Open</p>
-                <iframe
-                    src="https://tournifyapp.com/live/isdo2"
-                    width="100%"
-                    height="900"
-                    style="border: none"
-                 ></iframe>
-            </section>
-            <section>
-                <p></p>
-                <h3>Juni 2026:</h3>
-                <p>Central European Championship in Wien (CEC)</p>
-                <p></p>
-                <h3>Dezember 2026:</h3>
-                <p>World Championship in Bangkok</p>
-            </section>
-        </main>
-
-        <script src="js/components.js"></script>
-        <script>
-            document.addEventListener("DOMContentLoaded", () => {
-                // Any page specific logic here
-            });
-            <body>
-    <!-- Header -->
+    <!-- Header Component -->
     <app-header></app-header>
 
-    <!-- Sidebar Overlay -->
+    <!-- Sidebar Overlay Component -->
     <app-sidebars></app-sidebars>
 
-    <!-- Main Content -->
+    <!-- Main Content im News-Container-Styling -->
     <main class="news-container">
 
-        <!-- Schweizermeisterschaft -->
+        <!-- Sektion: Schweizermeisterschaft -->
         <article class="news-card">
             <div class="news-card-content">
                 <p class="news-date">Saison 2025 / 2026</p>
                 <h2>Schweizermeisterschaft</h2>
-                <p>
-                    Hier findest du alle Informationen und Ergebnisse
-                    zur Schweizermeisterschaft der Saison 2025 / 2026.
-                </p>
+                <p>Hier findest du alle Live-Informationen, Ranglisten und Ergebnisse zur laufenden Schweizermeisterschaft der Saison 2025 / 2026.</p>
 
-                <button class="weiterlesen" onclick="toggleBeitrag(this)">
-                    Weiterlesen →
-                </button>
+                <button class="weiterlesen" onclick="toggleBeitrag(this)">Weiterlesen →</button>
 
                 <div class="beitrag-details">
                     <iframe
                         src="https://tournifyapp.com/live/swisschampionship25-26/team"
                         width="100%"
                         height="900"
-                        style="border: none">
+                        style="border: none;">
                     </iframe>
                 </div>
             </div>
         </article>
 
-
-        <!-- Sharks Open -->
+        <!-- Sektion: Sharks Open -->
         <article class="news-card">
             <div class="news-card-content">
                 <p class="news-date">April 2026</p>
                 <h2>Sharks Open</h2>
-                <p>
-                    Im April 2026 fand das Sharks Open statt.
-                    Hier geht es zu den Ergebnissen des Turniers.
-                </p>
+                <p>Im April 2026 fand das Sharks Open statt. Klappe den Beitrag auf, um direkt zu den Spielergebnissen und Turnierplatzierungen zu gelangen.</p>
 
-                <button class="weiterlesen" onclick="toggleBeitrag(this)">
-                    Weiterlesen →
-                </button>
+                <button class="weiterlesen" onclick="toggleBeitrag(this)">Weiterlesen →</button>
 
                 <div class="beitrag-details">
                     <iframe
                         src="https://tournifyapp.com/live/isdo2"
                         width="100%"
                         height="900"
-                        style="border: none">
+                        style="border: none;">
                     </iframe>
                 </div>
             </div>
         </article>
 
-
-        <!-- CEC -->
+        <!-- Sektion: CEC Wien -->
         <article class="news-card">
             <div class="news-card-content">
                 <p class="news-date">Juni 2026</p>
                 <h2>Central European Championship</h2>
-                <p>
-                    Die CEC findet im Juni 2026 in Wien statt.
-                </p>
+                <p>Das grosse europäische Kräftemessen: Die Central European Championship (CEC) findet im Juni 2026 statt.</p>
 
-                <button class="weiterlesen" onclick="toggleBeitrag(this)">
-                    Weiterlesen →
-                </button>
+                <button class="weiterlesen" onclick="toggleBeitrag(this)">Weiterlesen →</button>
 
                 <div class="beitrag-details">
-                    <p>
-                        Central European Championship in Wien (CEC)
-                    </p>
+                    <p>Die Zürich Hunters reisen nach Wien! Hier werden wir uns mit den besten Dodgeball-Teams aus ganz Zentraleuropa messen. Weitere Infos zu Spielplänen und Übertragungen folgen kurz vor Turnierstart.</p>
                 </div>
             </div>
         </article>
 
-
-        <!-- World Championship -->
+        <!-- Sektion: World Championship Bangkok -->
         <article class="news-card">
             <div class="news-card-content">
                 <p class="news-date">Dezember 2026</p>
                 <h2>World Championship</h2>
-                <p>
-                    Im Dezember 2026 geht es zur Weltmeisterschaft
-                    nach Bangkok.
-                </p>
+                <p>Das absolute Highlight des Jahres: Im Dezember 2026 geht es für das Schweizer Nationalteam zur Weltmeisterschaft nach Bangkok.</p>
 
-                <button class="weiterlesen" onclick="toggleBeitrag(this)">
-                    Weiterlesen →
-                </button>
+                <button class="weiterlesen" onclick="toggleBeitrag(this)">Weiterlesen →</button>
 
                 <div class="beitrag-details">
-                    <p>
-                        World Championship in Bangkok
-                    </p>
+                    <p>World Championship in Bangkok. Bleibe hier auf dem Laufenden über die Vorbereitungen, das Kader-Lineup und wie sich unsere Hunters-Spieler auf der weltweiten Bühne schlagen!</p>
                 </div>
             </div>
         </article>
 
     </main>
 
-
+    <!-- Skripte für deine Komponenten und den Aufklapp-Effekt -->
     <script src="js/components.js"></script>
-
     <script>
         function toggleBeitrag(button) {
+            // Findet das direkt nachfolgende ".beitrag-details"-Element
             const details = button.nextElementSibling;
 
+            // Schaltet die Klasse "open" für das Ein-/Ausblenden um
             details.classList.toggle("open");
 
+            // Ändert den Button-Text dynamisch passend zum Zustand
             if (details.classList.contains("open")) {
                 button.textContent = "Weniger anzeigen ↑";
             } else {
@@ -181,6 +109,4 @@
     </script>
 
 </body>
-        </script>
-    </body>
 </html>
