@@ -796,19 +796,21 @@ h1, h2, h3 {
     overflow-wrap: break-word;
     word-break: break-word;
 }
-/* =========================
-   TURNIER-BEITRÄGE
-   ========================= */
+/* ==========================================================================
+   ZÜRICH HUNTERS - TURNIER-BEITRÄGE & TOURNIFY CODES
+   ========================================================================== */
 
+/* Hauptcontainer für alle Turniere */
 .news-container {
     max-width: 1000px;
     margin: 60px auto;
     padding: 0 20px;
 }
 
+/* Die einzelne Turnier-Box (Karte) */
 .news-card {
     background: rgba(0, 0, 0, 0.75);
-    border-left: 4px solid rgb(255, 184, 82);
+    border-left: 4px solid rgb(255, 184, 82); /* Orange-gelbe Hunters Akzentlinie */
     border-radius: 8px;
     margin-bottom: 25px;
     padding: 25px 30px;
@@ -816,11 +818,13 @@ h1, h2, h3 {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+/* Hover-Effekt: Karte hebt sich leicht ab */
 .news-card:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7);
 }
 
+/* Das Datum über dem Titel */
 .news-date {
     color: rgb(255, 184, 82);
     font-size: 14px;
@@ -829,44 +833,41 @@ h1, h2, h3 {
     margin-bottom: 8px;
 }
 
+/* Turniertitel */
 .news-card h2 {
     color: white;
     font-size: 28px;
     margin: 0 0 10px 0;
 }
 
+/* Beschreibungstexte innerhalb der Karte */
 .news-card p {
     color: #E7E4D9;
     font-size: 15px;
     line-height: 1.6;
 }
 
-/* Weiterlesen Button */
-
+/* Der Weiterlesen / Weniger anzeigen Button */
 .weiterlesen {
     display: inline-block;
     margin-top: 10px;
     padding: 10px 18px;
-
     background-color: transparent;
     color: rgb(255, 184, 82);
-
     border: 1px solid rgb(255, 184, 82);
     border-radius: 5px;
-
     font-weight: bold;
     cursor: pointer;
-
     transition: all 0.3s ease;
 }
 
+/* Hover-Effekt für den Button */
 .weiterlesen:hover {
     background-color: rgb(255, 184, 82);
     color: rgb(96, 17, 10);
 }
 
-/* Inhalt, der erst nach "Weiterlesen" erscheint */
-
+/* Versteckter Bereich für Iframes und Zusatzinfos */
 .beitrag-details {
     display: none;
     margin-top: 25px;
@@ -874,14 +875,25 @@ h1, h2, h3 {
     border-top: 1px solid rgba(255, 184, 82, 0.4);
 }
 
+/* Wird via JavaScript hinzugefügt, wenn man klickt */
 .beitrag-details.open {
     display: block;
 }
 
-/* Mobile */
+/* Responsives Design für eingebettete Tournify-Pläne */
+.beitrag-details iframe {
+    width: 100%;
+    height: 900px;
+    border: none;
+    border-radius: 4px;
+    background: #ffffff; /* Weisser Hintergrund, falls Tournify lädt */
+}
+
+/* ==========================================================================
+   MOBILE OPTIMIERUNG (SMARTPHONES & TABLETS)
+   ========================================================================== */
 
 @media (max-width: 768px) {
-
     .news-container {
         padding: 0 15px;
         margin: 40px auto;
@@ -894,4 +906,11 @@ h1, h2, h3 {
     .news-card h2 {
         font-size: 24px;
     }
+
+    /* Verkürzte Iframe-Höhe auf dem Smartphone für bessere Bedienbarkeit */
+    .beitrag-details iframe {
+        height: 500px;
+    }
+}
+
 }
