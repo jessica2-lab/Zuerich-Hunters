@@ -968,11 +968,23 @@ h1, h2, h3 {
     background: rgba(0, 0, 0, 0.8);
     color: #E7E4D9;
     font-size: 14px;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
     box-sizing: border-box;
     border-top: 1px solid rgb(255, 184, 82);
+}
+
+/* Captions unter normalen Turnier-Fotos */
+.turnier-foto-box .foto-caption {
+    position: static;
+    width: 100%;
+    margin-top: 8px;
+}
+
+/* Caption im Karussell bleibt über dem Bild */
+.turnier-karussell .foto-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 }
 
 .karussell-btn {
