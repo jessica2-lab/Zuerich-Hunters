@@ -74,7 +74,7 @@
                 <div class="beitrag-details">
                     <div class="turnier-split-layout">
                         
-                        <!-- Linke Spalte: Text (Zuvor verloren gegangen) -->
+                        <!-- Linke Spalte: Text  -->
                         <div class="turnier-text-spalte">
                             <p>Als erster offizieller internationaler Auftritt unseres Vereins war dieses Wochenende ein echter Meilenstein. Gemeinsam mit den Basler Wicklefischen haben wir ein starkes Mixed- und ein Herren-Team auf die Beine gestellt, während unsere Damen die Sharksgirls tatkräftig auf dem Feld unterstützten.</p>
                             <p>Neben intensiven Matches und jede Menge wertvoller Erfahrungen auf Top-Niveau kam natürlich auch der Teamgeist nicht zu kurz – inklusive einer wohlverdienten, genialen Pizza-Runde am Abend! 🍕</p>
@@ -146,5 +146,44 @@
 
     </main>
 
-    <!-- Stelle sicher, dass deine JavaScript-Logik hier oder in einer externen JS-Datei geladen wird -->
+<script>
+    // Funktion zum Auf- und Zuklappen der Beiträge
+    function toggleBeitrag(button) {
+        const cardContent = button.closest('.news-card-content');
+        const details = cardContent.querySelector('.beitrag-details');
+        
+        // Prüft, ob der Beitrag bereits die Klasse 'open' besitzt
+        if (details.classList.contains('open')) {
+            details.classList.remove('open');
+            button.textContent = "Weiterlesen →";
+        } else {
+            details.classList.add('open');
+            button.textContent = "Schliessen ↑";
+        }
+    }
+
+    // Funktion für die Karussell-Steuerung
+    function changeSlide(direction, button) {
+        const karussell = button.closest('.turnier-karussell');
+        const slides = karussell.querySelectorAll('.karussell-slide');
+        
+        let currentSlideIndex = 0;
+        slides.forEach((slide, index) => {
+            if (slide.classList.contains('active')) {
+                currentSlideIndex = index;
+            }
+        });
+
+        slides[currentSlideIndex].classList.remove('active');
+        
+        let newSlideIndex = currentSlideIndex + direction;
+        
+        if (newSlideIndex >= slides.length) {
+            newSlideIndex = 0;
+        } else if (newSlideIndex < 0) {
+            newSlideIndex = slides.length - 1;
+        }
+        
+        slides[newSlideIndex].classList.add('active');
+    }
     <script>
