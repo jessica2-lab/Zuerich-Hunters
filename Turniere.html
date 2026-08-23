@@ -67,7 +67,7 @@
             </div>
         </article>
 
-        <!-- Sektion: Sharks Open -->
+                <!-- Sektion: Sharks Open -->
         <article class="news-card">
             <div class="news-card-content">
                 <p class="news-date">April 2026</p>
@@ -80,7 +80,7 @@
                 <div class="beitrag-details">
                     <div class="turnier-split-layout">
                         
-                        <!-- Linke Spalte: Text  -->
+                        <!-- Linke Spalte: Text -->
                         <div class="turnier-text-spalte">
                             <p>Als erster offizieller internationaler Auftritt unseres Vereins war dieses Wochenende ein echter Meilenstein. Gemeinsam mit den Basler Wicklefischen haben wir ein starkes Mixed- und ein Herren-Team auf die Beine gestellt, während unsere Damen die Sharksgirls tatkräftig auf dem Feld unterstützten.</p>
                             <p>Neben intensiven Matches und jede Menge wertvoller Erfahrungen auf Top-Niveau kam natürlich auch der Teamgeist nicht zu kurz – inklusive einer wohlverdienten, genialen Pizza-Runde am Abend! 🍕</p>
@@ -102,7 +102,7 @@
                                     </div>
                                 </div>
 
-                                <!-- Steuerungs-Buttons (Wichtig: onclick füttert "this" mit) -->
+                                <!-- Steuerungs-Buttons -->
                                 <button class="karussell-btn prev" onclick="changeSlide(-1, this)">❮</button>
                                 <button class="karussell-btn next" onclick="changeSlide(1, this)">❯</button>
                             </div>
@@ -112,6 +112,87 @@
                 </div> <!-- Ende beitrag-details -->
             </div> <!-- Ende news-card-content -->
         </article>
+
+        <!-- Sektion: CEC Wien -->
+        <article class="news-card">
+            <div class="news-card-content">
+                <p class="news-date">Juni 2026</p>
+                <h2>Central European Championship (CEC)</h2>
+                <p>Die Zürich Hunters erobern Wien! Beim grossen europäischen Kräftemessen in Österreich durften sich unsere Spieler auf der ganz grossen Bühne beweisen.</p>
+
+                <button class="weiterlesen" onclick="toggleBeitrag(this)">Weiterlesen →</button>
+
+                <div class="beitrag-details">
+                    <p>Die Schweizer Nationalmannschaft reiste mit starker Unterstützung von einigen Spielern unseres Zürcher Vereins nach Wien, um sich mit den besten Dodgeball-Teams aus ganz Zentraleuropa zu messen.</p>
+                    <p>Es war ein extrem intensives Turnier, bei dem wir unglaublich viel internationale Erfahrung sammeln konnten. Am Ende schaute für die Schweiz sogar ein sensationeller <strong style="color: white;">4. Platz im Mixed</strong> heraus! Und die Damen- & Herrenteams konnten auch tolle Erfahrungen sammeln.</p>
+                    <p>Dieses Ergebnis ist mehr als zufriedenstellend – vor allem, wenn man bedenkt, gegen what für etablierte Top-Nationen wie Österreich, Tschechien und Italien wir auf dem Feld alles gegeben und uns behauptet haben. Ein riesiger Erfolg für das Schweizer Dodgeball und unsere Hunters!</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Sektion: World Championship Bangkok -->
+        <article class="news-card">
+            <div class="news-card-content">
+                <p class="news-date">Dezember 2026</p>
+                <h2>World Championship Bangkok</h2>
+                <p>Das absolute Highlight des Jahres steht an! Im Dezember geht es für die weltbesten Dodgeball-Nationen nach Thailand – und die Zürich Hunters sind mittendrin!</p>
+
+                <button class="weiterlesen" onclick="toggleBeitrag(this)">Weiterlesen →</button>
+
+                <div class="beitrag-details">
+                    <p>Die Vorfreude im Verein ist riesig, denn wir sind gleich mit drei Spielern auf der grössten internationalen Bühne vertreten:</p>
+                    <ul class="ergebnis-liste" style="list-style: none; padding-left: 0;">
+                        <li>🇨🇭 <strong style="color: white; margin-left: 8px;">Team Schweiz:</strong> Zwei unserer Hunters wurden für die Schweizer Nationalmannschaft nominiert und kämpfen im roten Trikot um den Weltmeistertitel.</li>
+                        <li>🇱🇺 <strong style="color: white; margin-left: 8px;">Team Luxemburg:</strong> Ein weiterer Spieler von uns wird das luxemburgische Nationalteam tatkräftig auf dem Feld verstärken.</li>
+                    </ul>
+                    <p>Für unseren jungen Verein ist das eine unglaubliche Ehre und zeigt, wie viel Potenzial in unserem Rudel steckt. Wir wünschen unseren drei WM-Fahrern eine unvergessliche Zeit in Bangkok, verletzungsfreie Spiele und maximalen Erfolg!</p>
+                </div>
+            </div>
+        </article>
+
+    </main>
+
+    <!-- JavaScript-Logik für die Steuerung der Webseite -->
+    <script>
+        // Logik zum Auf- und Zuklappen der Karten
+        function toggleBeitrag(button) {
+            const cardContent = button.closest('.news-card-content');
+            const details = cardContent.querySelector('.beitrag-details');
+            
+            if (details.classList.contains('open')) {
+                details.classList.remove('open');
+                button.textContent = "Weiterlesen →";
+            } else {
+                details.classList.add('open');
+                button.textContent = "Schliessen ↑";
+            }
+        }
+
+        // Logik für die Foto-Karussell-Navigation
+        function changeSlide(direction, button) {
+            const karussell = button.closest('.turnier-karussell');
+            const slides = karussell.querySelectorAll('.karussell-slide');
+            
+            let currentSlideIndex = 0;
+            slides.forEach((slide, index) => {
+                if (slide.classList.contains('active')) {
+                    currentSlideIndex = index;
+                }
+            });
+
+            slides[currentSlideIndex].classList.remove('active');
+            
+            let newSlideIndex = currentSlideIndex + direction;
+            
+            if (newSlideIndex >= slides.length) {
+                newSlideIndex = 0;
+            } else if (newSlideIndex < 0) {
+                newSlideIndex = slides.length - 1;
+            }
+            
+            slides[newSlideIndex].classList.add('active');
+        }
+
 
         <!-- Sektion: CEC Wien -->
         <article class="news-card">
@@ -192,4 +273,6 @@
         
         slides[newSlideIndex].classList.add('active');
     }
-    <script>
+        </script>
+</body>
+</html>
