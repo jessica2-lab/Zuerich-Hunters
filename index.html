@@ -1,536 +1,112 @@
 <!doctype html>
-
 <html lang="de">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Turniere - Zürich Hunters</title>
-
-```
-    <link rel="stylesheet" href="style.css?v=4" />
-</head>
-
-<body>
-
-    <!-- ===== HEADER / NAVIGATION ===== -->
-    <app-header></app-header>
-
-    <!-- ===== SIDEBAR ===== -->
-    <app-sidebars></app-sidebars>
-
-
-    <!-- ===== TURNIER-BEITRÄGE ===== -->
-    <main class="news-container">
-
-        <!-- ==========================================
-             SCHWEIZERMEISTERSCHAFT
-             ========================================== -->
-        <article class="news-card">
-            <div class="news-card-content">
-
-                <p class="news-date">Saison 2025 / 2026</p>
-
-                <h2>Schweizermeisterschaft</h2>
-
-                <p>
-                    Die allererste Saison für unser junges Hunters-Rudel ist
-                    offiziell zu Ende! Was für eine Reise – wir haben
-                    wertvolle Erfahrungen gesammelt und blicken voller Stolz
-                    auf ein intensives Premierenjahr zurück.
-                </p>
-
-                <button
-                    class="weiterlesen"
-                    onclick="toggleBeitrag(this)"
-                >
-                    Weiterlesen →
-                </button>
-
-
-                <!-- Ausgeklappter Bereich -->
-                <div class="beitrag-details">
-
-                    <div class="turnier-split-layout">
-
-                        <!-- TEXT -->
-                        <div class="turnier-text-spalte">
-
-                            <p>
-                                Vom anfänglichen Premierchaos haben wir uns
-                                als Team von Spieltag zu Spieltag grandios
-                                nach oben gekämpft und spielerisch enorm viel
-                                dazugelernt. Die harten Trainings haben sich
-                                ausgezahlt, was sich auch in den finalen
-                                Ergebnissen widerspiegelt:
-                            </p>
-
-                            <ul class="ergebnis-liste">
-
-                                <li>
-                                    <span class="emoji">✨</span>
-                                    <strong>Mixed:</strong>
-                                    Starker 5. Platz
-                                </li>
-
-                                <li>
-                                    <span class="emoji">🔥</span>
-                                    <strong>Herren:</strong>
-                                    Knapp am Podest vorbei auf Platz 4
-                                </li>
-
-                                <li>
-                                    <span class="emoji">🥉</span>
-                                    <strong>Damen (in der SG Röstigraben):</strong>
-                                    Sensationeller 3. Platz und damit die
-                                    Bronzemedaille!
-                                </li>
-
-                            </ul>
-
-                            <p class="turnier-fazit">
-                                Das ist ein fantastisches Fundament, auf dem
-                                wir für die Zukunft aufbauen können. Ein
-                                riesiges Dankeschön an alle Spieler,
-                                Supporter und Fans. Wir sind hungrig auf mehr
-                                und freuen uns schon jetzt riesig auf die
-                                nächste Saison!
-                            </p>
-
-                        </div>
-
-
-                        <!-- FOTOS -->
-                        <div class="turnier-foto-spalte">
-
-                            <div class="turnier-foto-box">
-
-                                <img
-                                    src="Images/Damen 1.Turniertag.JPG"
-                                    alt="Zürich Hunters Damen Team"
-                                />
-
-                                <img
-                                    src="Images/Herren 2.Turniertag.JPG"
-                                    alt="Zürich Hunters Herren Team"
-                                />
-
-                                <span class="foto-caption">
-                                    Unser Rudel an der SM
-                                </span>
-
-                            </div>
-
-
-                            <div class="turnier-foto-box">
-
-                                <img
-                                    src="Images/Turnier 2.jpeg"
-                                    alt="Zürich Hunters am Turniertag"
-                                />
-
-                                <span class="foto-caption">
-                                    Voller Einsatz am Turniertag
-                                </span>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-        </article>
-
-
-
-        <!-- ==========================================
-             SHARKS OPEN
-             ========================================== -->
-        <article class="news-card">
-
-            <div class="news-card-content">
-
-                <p class="news-date">April 2026</p>
-
-                <h2>Sharks Open</h2>
-
-                <p>
-                    Im April ging es für die Zürich Hunters an das legendäre
-                    Sharks Open nach Morges am Genfersee. Für viele unserer
-                    SpielerInnen war es die allererste internationale
-                    Turnierluft!
-                </p>
-
-                <button
-                    class="weiterlesen"
-                    onclick="toggleBeitrag(this)"
-                >
-                    Weiterlesen →
-                </button>
-
-
-                <!-- Ausgeklappter Bereich -->
-                <div class="beitrag-details">
-
-                    <div class="turnier-split-layout">
-
-                        <!-- TEXT -->
-                        <div class="turnier-text-spalte">
-
-                            <p>
-                                Als erster offizieller internationaler
-                                Auftritt unseres Vereins war dieses
-                                Wochenende ein echter Meilenstein.
-                                Gemeinsam mit den Basler Wicklefischen
-                                haben wir ein starkes Mixed- und ein
-                                Herren-Team auf die Beine gestellt,
-                                während unsere Damen die Sharksgirls
-                                tatkräftig auf dem Feld unterstützten.
-                            </p>
-
-                            <p>
-                                Neben intensiven Matches und jede Menge
-                                wertvoller Erfahrungen auf Top-Niveau kam
-                                natürlich auch der Teamgeist nicht zu kurz –
-                                inklusive einer wohlverdienten, genialen
-                                Pizza-Runde am Abend! 🍕
-                            </p>
-
-                            <p>
-                                Das Fazit steht fest: Wir hoffen schwer,
-                                dass wir auch im nächsten Jahr unsere
-                                Ostertage statt mit der Eiersuche lieber
-                                wieder mit harten Dodgeball-Würfen
-                                verbringen dürfen!
-                            </p>
-
-                        </div>
-
-
-                        <!-- KARUSSELL -->
-                        <div class="turnier-foto-spalte">
-
-                            <div class="turnier-karussell">
-
-                                <div class="karussell-slides">
-
-                                    <div class="karussell-slide active">
-                                        <img
-                                            src="Images/ISDO-1.jpg"
-                                            alt="Sharks Open 1"
-                                        />
-                                    </div>
-
-                                    <div class="karussell-slide">
-                                        <img
-                                            src="Images/ISDO-2.jpg"
-                                            alt="Sharks Open 2"
-                                        />
-                                    </div>
-
-                                    <div class="karussell-slide">
-                                        <img
-                                            src="Images/ISDO-3.jpg"
-                                            alt="Sharks Open 3"
-                                        />
-                                    </div>
-
-                                    <div class="karussell-slide">
-                                        <img
-                                            src="Images/ISDO-4.jpg"
-                                            alt="Sharks Open 4"
-                                        />
-                                    </div>
-
-                                    <div class="karussell-slide">
-
-                                        <img
-                                            src="Images/ISDO-5.jpg"
-                                            alt="Sharks Open 5"
-                                        />
-
-                                        <span class="foto-caption">
-                                            Voller Einsatz am Turniertag
-                                        </span>
-
-                                    </div>
-
-                                </div>
-
-
-                                <button
-                                    class="karussell-btn prev"
-                                    onclick="changeSlide(-1, this)"
-                                    aria-label="Vorheriges Bild"
-                                >
-                                    ❮
-                                </button>
-
-                                <button
-                                    class="karussell-btn next"
-                                    onclick="changeSlide(1, this)"
-                                    aria-label="Nächstes Bild"
-                                >
-                                    ❯
-                                </button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
+        <title>Zürich Hunters - Dodgeball Team</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body>
+        <app-header></app-header>
+
+        <app-sidebars></app-sidebars>
+
+        <main id="home">
+            <div class="logo-section">
+                <img src="Images/logo.png" class="large-logo" alt="" />
+                <img src="Images/lion.svg" class="lion-svg" alt="" />
             </div>
 
-        </article>
+            <section class="banner">
+                <h1>Zürich Hunters</h1>
+                <p>Dodgeball mit Biss</p>
 
-
-
-        <!-- ==========================================
-             CENTRAL EUROPEAN CHAMPIONSHIP
-             ========================================== -->
-        <article class="news-card">
-
-            <div class="news-card-content">
-
-                <p class="news-date">Juni 2026</p>
-
-                <h2>Central European Championship (CEC)</h2>
-
-                <p>
-                    Die Zürich Hunters erobern Wien! Beim grossen
-                    europäischen Kräftemessen in Österreich durften sich
-                    unsere Spieler auf der ganz grossen Bühne beweisen.
-                </p>
-
-                <button
-                    class="weiterlesen"
-                    onclick="toggleBeitrag(this)"
-                >
-                    Weiterlesen →
-                </button>
-
-
-                <div class="beitrag-details">
-
-                    <p>
-                        Die Schweizer Nationalmannschaft reiste mit starker
-                        Unterstützung von einigen Spielern unseres Zürcher
-                        Vereins nach Wien, um sich mit den besten
-                        Dodgeball-Teams aus ganz Zentraleuropa zu messen.
-                    </p>
-
-                    <p>
-                        Es war ein extrem intensives Turnier, bei dem wir
-                        unglaublich viel internationale Erfahrung sammeln
-                        konnten. Am Ende schaute für die Schweiz sogar ein
-                        sensationeller
-                        <strong style="color: white;">
-                            4. Platz im Mixed
-                        </strong>
-                        heraus! Und die Damen- & Herrenteams konnten auch
-                        tolle Erfahrungen sammeln.
-                    </p>
-
-                    <p>
-                        Dieses Ergebnis ist mehr als zufriedenstellend –
-                        vor allem, wenn man bedenkt, gegen was für etablierte
-                        Top-Nationen wie Österreich, Tschechien und Italien
-                        wir auf dem Feld alles gegeben und uns behauptet
-                        haben. Ein riesiger Erfolg für das Schweizer
-                        Dodgeball und unsere Hunters!
-                    </p>
-
-                </div>
-
-            </div>
-
-        </article>
-
-
-
-        <!-- ==========================================
-             WORLD CHAMPIONSHIP BANGKOK
-             ========================================== -->
-        <article class="news-card">
-
-            <div class="news-card-content">
-
-                <p class="news-date">Dezember 2026</p>
-
-                <h2>World Championship Bangkok</h2>
-
-                <p>
-                    Das absolute Highlight des Jahres steht an! Im Dezember
-                    geht es für die weltbesten Dodgeball-Nationen nach
-                    Thailand – und die Zürich Hunters sind mittendrin!
-                </p>
-
-                <button
-                    class="weiterlesen"
-                    onclick="toggleBeitrag(this)"
-                >
-                    Weiterlesen →
-                </button>
-
-
-                <div class="beitrag-details">
-
-                    <p>
-                        Die Vorfreude im Verein ist riesig, denn wir sind
-                        gleich mit drei Spielern auf der grössten
-                        internationalen Bühne vertreten:
-                    </p>
-
-
-                    <ul
-                        class="ergebnis-liste"
-                        style="list-style: none; padding-left: 0;"
+                <div class="hero-buttons">
+                    <a href="Kontakt.html" class="btn btn-primary"
+                        >Jetzt Mitmachen</a
                     >
+                    <a
+                        href="#about"
+                        class="btn btn-secondary sidebar-trigger"
+                        data-sidebar="about"
+                        >Über uns</a
+                    >
+                </div>
+            </section>
 
-                        <li>
-                            🇨🇭
-                            <strong
-                                style="color: white; margin-left: 8px;"
-                            >
-                                Team Schweiz:
-                            </strong>
-                            Zwei unserer Hunters wurden für die Schweizer
-                            Nationalmannschaft nominiert und kämpfen im
-                            roten Trikot um den Weltmeistertitel.
-                        </li>
-
-                        <li>
-                            🇱🇺
-                            <strong
-                                style="color: white; margin-left: 8px;"
-                            >
-                                Team Luxemburg:
-                            </strong>
-                            Ein weiterer Spieler von uns wird das
-                            luxemburgische Nationalteam tatkräftig auf dem
-                            Feld verstärken.
-                        </li>
-
-                    </ul>
-
-
-                    <p>
-                        Für unseren jungen Verein ist das eine unglaubliche
-                        Ehre und zeigt, wie viel Potenzial in unserem Rudel
-                        steckt. Wir wünschen unseren drei WM-Fahrern eine
-                        unvergessliche Zeit in Bangkok, verletzungsfreie
-                        Spiele und maximalen sportlichen Erfolg!
-                    </p>
-
+            <section class="two-column-banner">
+                <div class="banner-column">
+                    <img
+                        src="Images/Wappen Flagge.png"
+                        class="banner-icon"
+                        alt=""
+                    />
+                    <h3>Komm in unser Team!</h3>
+                    <p>Motivierte Spieler gesucht - Anfänger willkommen.</p>
                 </div>
 
-            </div>
+                <div class="banner-column">
+                    <img
+                        src="Images/Symbol_Ball.png"
+                        class="banner-icon"
+                        alt=""
+                    />
+                    <h3>Let's play Dodgeball!</h3>
+                    <p>Action, Teamgeist & Adrenalin.</p>
+                </div>
+            </section>
 
-        </article>
+            <section id="about" class="about-section">
+                <div class="about-content">
+                    <h2>Über uns</h2>
+                    <p>Werde Teil des Zürich Hunters Rudels.</p>
+                    <a
+                        class="btn btn-primary sidebar-trigger"
+                        data-sidebar="about"
+                        >Mehr erfahren</a
+                    >
+                </div>
 
-    </main>
+                <div class="about-images">
+                    <img
+                        src="Images/Herren 1.Turniertag.JPG"
+                        class="about-img"
+                        alt=""
+                    />
+                    <img src="Images/Mixed 2.TD.jpg" class="about-img" alt="" />
+                </div>
+            </section>
 
+            <section id="contact" class="contact-section">
+                <div class="contact-content">
+                    <h2>Kontakt</h2>
+                    <p>
+                        Instagram:
+                        <a href="https://www.instagram.com/zurichhunters/"
+                            >zurich hunters</a
+                        >
+                    </p>
+                    <p>Email: zurichhunters@gmx.ch</p>
+                    <a href="mailto:zuerichhunters@gmx.ch">Email senden</a>
+                </div>
 
+                <div class="contact-images">
+                    <img
+                        src="Images/Instagram.jpg"
+                        class="contact-img"
+                        alt=""
+                    />
+                </div>
+            </section>
+        </main>
 
-    <!-- ==========================================
-         GEMEINSAME COMPONENTS
-         Header, Navigation und Sidebar
-         ========================================== -->
-    <script src="js/components.js"></script>
-
-
-    <!-- ==========================================
-         TURNIER-JAVASCRIPT
-         ========================================== -->
-    <script>
-
-        // ------------------------------------------
-        // Beiträge auf- und zuklappen
-        // ------------------------------------------
-
-        function toggleBeitrag(button) {
-
-            const cardContent =
-                button.closest(".news-card-content");
-
-            const details =
-                cardContent.querySelector(".beitrag-details");
-
-            if (details.classList.contains("open")) {
-
-                details.classList.remove("open");
-
-                button.textContent = "Weiterlesen →";
-
-            } else {
-
-                details.classList.add("open");
-
-                button.textContent = "Schliessen ↑";
-
-            }
-
-        }
-
-
-
-        // ------------------------------------------
-        // Foto-Karussell
-        // ------------------------------------------
-
-        function changeSlide(direction, button) {
-
-            const karussell =
-                button.closest(".turnier-karussell");
-
-            const slides =
-                karussell.querySelectorAll(".karussell-slide");
-
-
-            let currentSlideIndex = 0;
-
-
-            slides.forEach((slide, index) => {
-
-                if (slide.classList.contains("active")) {
-
-                    currentSlideIndex = index;
-
-                }
-
+        <!-- ===== SCRIPTS ===== -->
+        <script src="js/components.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                // Any page specific logic here
             });
-
-
-            slides[currentSlideIndex].classList.remove("active");
-
-
-            let newSlideIndex =
-                currentSlideIndex + direction;
-
-
-            if (newSlideIndex >= slides.length) {
-
-                newSlideIndex = 0;
-
-            } else if (newSlideIndex < 0) {
-
-                newSlideIndex = slides.length - 1;
-
-            }
-
-
-            slides[newSlideIndex].classList.add("active");
-
-        }
-
-    </script>
-
-</body>
-```
-
+        </script>
+    </body>
 </html>
