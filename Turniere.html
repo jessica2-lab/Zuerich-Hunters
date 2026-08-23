@@ -151,6 +151,36 @@
                 button.textContent = "Weiterlesen →";
             }
         }
+
+        function changeSlide(direction, button) {
+    // Das Karussell finden, in dem der geklickte Button liegt
+    const karussell = button.closest('.turnier-karussell');
+    const slides = karussell.querySelectorAll('.karussell-slide');
+    
+    // Aktuell sichtbares Slide finden
+    let currentSlideIndex = 0;
+    slides.forEach((slide, index) => {
+        if (slide.classList.contains('active')) {
+            currentSlideIndex = index;
+        }
+    });
+
+    // Aktuelles Slide ausblenden
+    slides[currentSlideIndex].classList.remove('active');
+    
+    // Neuen Index ermitteln
+    let newSlideIndex = currentSlideIndex + direction;
+    
+    // Endlos-Schleife (Wenn am Ende angekommen, wieder von vorne starten)
+    if (newSlideIndex >= slides.length) {
+        newSlideIndex = 0;
+    } else if (newSlideIndex < 0) {
+        newSlideIndex = slides.length - 1;
+    }
+    
+    // Neues Slide einblenden
+    slides[newSlideIndex].classList.add('active');
+}
     </script>
 
 </body>
