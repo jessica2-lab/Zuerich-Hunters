@@ -5,23 +5,22 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Turniere - Zürich Hunters</title>
 
-        <link rel="stylesheet" href="style.css" />
+        <!-- Cache-Busting (?v=4) zwingt den Browser, die neueste CSS-Datei frisch zu laden -->
+        <link rel="stylesheet" href="style.css?v=4" />
 
         <!-- Leaflet CSS -->
-        <link
-            rel="stylesheet"
-            href="https://unpkg.com/leaflet/dist/leaflet.css"
-        />
+        <link rel="stylesheet" href="https://unpkg.com" />
     </head>
+    <body>
 
-    <!-- Header Component -->
-    <app-header></app-header>
+        <!-- Header Component -->
+        <app-header></app-header>
 
-    <!-- Sidebar Overlay Component -->
-    <app-sidebars></app-sidebars>
+        <!-- Sidebar Overlay Component -->
+        <app-sidebars></app-sidebars>
 
-    <!-- Main Content im News-Container-Styling -->
-    <main class="news-container">
+        <!-- Main Content im News-Container-Styling -->
+        <main class="news-container">
 
         <!-- Sektion: Schweizermeisterschaft -->
         <article class="news-card">
