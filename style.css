@@ -1,4 +1,4 @@
-* {
+¨* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -346,7 +346,7 @@ section p {
 
     .banner p {
         font-size: clamp(24px, 5vw, 48px);
-        line-height: 1.2:;
+        line-height: 1.2;
     }
 
     .hero-buttons {
@@ -578,11 +578,13 @@ section p {
 
 /* KARUSSELL */
 
+/* ==========================================================================
+   KARUSSELL (SIDEBAR / ALLGEMEIN)
+   ========================================================================== */
 .carousel-container {
     position: relative;
     width: 100%;
-    max-width: 340px;
-    /* passt gut in die Sidebar */
+    max-width: 340px; /* Passt gut in die Sidebar */
     margin: 30px auto;
     overflow: hidden;
     border-radius: 10px;
@@ -595,13 +597,10 @@ section p {
 
 .carousel img {
     width: 100%;
-    height: 220px;
-    /* feste Höhe = kein Springen */
+    height: 220px; /* Feste Höhe gegen Springen */
     flex-shrink: 0;
-    object-fit: contain;
-    /* KEIN Abschneiden mehr */
-    background-color: #000;
-    /* schwarze Balken statt Crop */
+    object-fit: contain; /* Kein Abschneiden mehr */
+    background-color: #000; /* Schwarze Balken statt unschönem Crop */
 }
 
 .carousel-btn {
@@ -632,18 +631,10 @@ section p {
 }
 
 
-/* =========================
-   HAMBURGER MENU
-   ========================= */
-
-
-
-/* =========================
-   MOBILE FIXES
-   ========================= */
-
+/* ==========================================================================
+   MOBILE FIXES (BREAKPOINT 900px)
+   ========================================================================== */
 @media screen and (max-width: 900px) {
-
     /* LOGO SECTION */
     .logo-section {
         display: flex;
@@ -695,7 +686,7 @@ section p {
         max-width: 140px;
     }
 
-    /* CONTACT */
+    /* CONTACT SECTION */
     .contact-section {
         grid-template-columns: 1fr;
         text-align: center;
@@ -707,10 +698,9 @@ section p {
 }
 
 
-/* =========================
-   LIGHTBOX
-   ========================= */
-
+/* ==========================================================================
+   LIGHTBOX STYLES
+   ========================================================================== */
 .lightbox {
     position: fixed;
     top: 0;
@@ -719,7 +709,6 @@ section p {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.9);
     display: none;
-    /* Hidden by default */
     align-items: center;
     justify-content: center;
     z-index: 2000;
@@ -790,16 +779,16 @@ section p {
 .gallery-img {
     cursor: zoom-in;
 }
-/* Fix für lange Wörter auf Mobile */
 
 h1, h2, h3 {
     overflow-wrap: break-word;
     word-break: break-word;
 }
-/* ==========================================================================
-   TURNIER-BEITRÄGE (UPDATE FÜR SPLIT-LAYOUT & FOTOS)
-   ========================================================================== */
 
+
+/* ==========================================================================
+   TURNIER-BEITRÄGE & NEWS-CARDS
+   ========================================================================== */
 .news-container {
     max-width: 1000px;
     margin: 60px auto;
@@ -866,31 +855,30 @@ h1, h2, h3 {
     border-top: 1px solid rgba(255, 184, 82, 0.4);
 }
 
+/* JavaScript setzt diese Klasse zum Aufklappen */
 .beitrag-details.open {
     display: block;
 }
 
 /* --- SPLIT-LAYOUT FÜR TEXT + FOTOS --- */
 .turnier-split-layout {
-    display: flex;
-    gap: 30px;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
 }
 
 .turnier-text-spalte {
-    flex: 6;
+    width: 100%;
 }
 
 .turnier-foto-spalte {
-    flex: 4;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+    width: 100%;
 }
 
-/* Listen-Formatierung ohne hässliche Standardpunkte */
+/* Ergebnislisten Formatierung */
 .ergebnis-liste, .wm-liste {
-    list-style: none !important; 
+    list-style: none !important;
     padding-left: 0 !important;
     margin: 20px 0;
 }
@@ -927,7 +915,6 @@ h1, h2, h3 {
     padding-top: 15px;
 }
 
-/* Fotos & Rahmen */
 .turnier-foto-box {
     background: rgba(0, 0, 0, 0.4);
     padding: 8px;
@@ -942,54 +929,10 @@ h1, h2, h3 {
     border-radius: 4px;
 }
 
-.foto-caption {
-    display: block;
-    font-size: 12px;
-    color: rgb(255, 184, 82);
-    text-align: center;
-    margin-top: 6px;
-    font-style: italic;
-}
-
-/* Mobile Darstellung */
-@media (max-width: 768px) {
-    .news-container {
-        padding: 0 15px;
-        margin: 40px auto;
-    }
-    .news-card {
-        padding: 20px;
-    }
-    .news-card h2 {
-        font-size: 24px;
-    }
-    .turnier-split-layout {
-        flex-direction: column;
-    }
-    .turnier-text-spalte, .turnier-foto-spalte {
-        width: 100%;
-    }
-}
 
 /* ==========================================================================
-   TURNIER SPLIT-LAYOUT & KARUSSELL (SLIDER) 
+   FOTO-KARUSSELL (SLIDER INNERHALB DER BEITRÄGE)
    ========================================================================== */
-
-.turnier-split-layout {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: start;
-}
-
-@media (max-width: 768px) {
-    .turnier-split-layout {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-}
-
-/* Karussell Haupt-Rahmen */
 .turnier-karussell {
     position: relative;
     width: 100%;
@@ -1001,14 +944,12 @@ h1, h2, h3 {
     background-color: rgba(0, 0, 0, 0.4);
 }
 
-/* Slides standardmäßig ausblenden */
 .karussell-slide {
     display: none;
     position: relative;
     width: 100%;
 }
 
-/* Sichtbares Slide */
 .karussell-slide.active {
     display: block;
 }
@@ -1020,7 +961,6 @@ h1, h2, h3 {
     object-fit: cover;
 }
 
-/* Bildbeschriftung (z.B. für Bild 5) */
 .foto-caption {
     display: block;
     text-align: center;
@@ -1035,13 +975,12 @@ h1, h2, h3 {
     border-top: 1px solid rgb(255, 184, 82);
 }
 
-/* Navigations-Pfeile */
 .karussell-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.6);
-    color: rgb(255, 184, 82); /* Gold-Ton aus deinem Design */
+    color: rgb(255, 184, 82);
     border: 1px solid rgba(255, 184, 82, 0.3);
     padding: 14px 16px;
     cursor: pointer;
@@ -1054,7 +993,7 @@ h1, h2, h3 {
 
 .karussell-btn:hover {
     background-color: rgb(255, 184, 82);
-    color: rgb(96, 17, 10); /* Dunkelrot aus deinen Header-Buttons */
+    color: rgb(96, 17, 10);
     border-color: rgb(255, 184, 82);
 }
 
@@ -1068,3 +1007,26 @@ h1, h2, h3 {
     border-radius: 5px 0 0 5px; 
 }
 
+
+/* ==========================================================================
+   MOBILE RESPONSIVENESS (BREAKPOINT 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .news-container {
+        padding: 0 15px;
+        margin: 40px auto;
+    }
+    
+    .news-card {
+        padding: 20px;
+    }
+    
+    .news-card h2 {
+        font-size: 24px;
+    }
+    
+    .turnier-split-layout {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
